@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="60dp"
+            android:src="@drawable/patient_icon"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/patientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mr John"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textSize="17dp"
+                />
+            <TextView
+                android:id="@+id/patientAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CNIC: 23"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_medium"
+                />
+            <TextView
+                android:id="@+id/patientId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID: 2232"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_medium"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:weightSum="2"
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/view"
+                android:id="@+id/btnView"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/delete"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

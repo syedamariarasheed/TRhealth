@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1055887033969",
+    "project_id": "trhealth-3f393",
+    "storage_bucket": "trhealth-3f393.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055887033969:android:945d825241c90daa483dd0",
+        "android_client_info": {
+          "package_name": "com.example.trhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055887033969-1b88qjb3ep8a4uokei2btj7uf2ni1ces.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB77Z043NJ1ZYe45K0_lDq196qJKBhQqlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055887033969-1b88qjb3ep8a4uokei2btj7uf2ni1ces.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

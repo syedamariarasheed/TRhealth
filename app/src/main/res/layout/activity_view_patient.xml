@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Doctor.Screens.ViewPatient">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Search Any Patient"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_border"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/background_color"
+        android:hint="Search patient by id or name"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:drawableTint="#7568E3"
+        android:id="@+id/tvSearch"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:id="@+id/rvViewPatient"
+        />
+
+
+</LinearLayout>

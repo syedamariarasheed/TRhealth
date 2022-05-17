@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TRHealth" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/background_color</item>
+        <item name="colorPrimaryVariant">@color/background_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="EditScreenTextInputLayoutStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/textInputLayout</item>
+        <item name="colorControlActivated">@color/textInputLayout</item>
+        <item name="colorControlHighlight">@color/textInputLayout</item>
+        <item name="colorAccent">@color/textInputLayout</item>
+        <item name="android:textColorHint">@color/textInputLayout</item>
+    </style>
+
+
+    <style name="EditScreenTextInputLayoutStyle1" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/background_color</item>
+        <item name="colorControlActivated">@color/background_color</item>
+        <item name="colorControlHighlight">@color/background_color</item>
+        <item name="colorAccent">@color/background_color</item>
+        <item name="android:textColorHint">@color/background_color</item>
+    </style>
+
+    <style name="Theme.TRHealth.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TRHealth.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="Theme.TRHealth.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gold</item>
+        <item name="colorControlActivated">@color/gold</item>
+    </style>
+    <style name="Theme.TRHealth.Fullscreen" parent="Theme.TRHealth">
+        <item name="android:actionBarStyle">@style/Widget.Theme.TRHealth.ActionBar.Fullscreen</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.TRHealth.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+</resources>

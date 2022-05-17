@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/activity_add_reports.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/activity_book_appointment.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/activity_book_doctor.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/activity_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/activity_doctor_sign_up.xml" value="0.25025641025641027" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/activity_my_reports.xml" value="0.25025641025641027" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/activity_patient_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/activity_patient_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/row_book_appointment.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/app/src/main/res/layout/row_my_reports.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/scanlibrary/src/main/res/layout/pick_image_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/TRHealth/TRHealth/scanlibrary/src/main/res/layout/scan_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/drawable/button_background.xml" value="0.2169230769230769" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/drawable/buttonshapewhitebg.xml" value="0.2169230769230769" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/drawable/ic_cnic.xml" value="0.2169230769230769" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/drawable/ic_email_white_24dp.xml" value="0.2169230769230769" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/drawable/round_button_grey.xml" value="0.2169230769230769" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/drawable/round_corner_border.xml" value="0.18796296296296297" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/drawable/round_corner_btn.xml" value="0.2169230769230769" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/drawable/round_corner_btn1.xml" value="0.1125" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_add_reports.xml" value="0.18" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_admin_sign_in.xml" value="0.12771739130434784" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_admin_sign_up.xml" value="0.22" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_book_appointment.xml" value="0.18" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_book_doctor.xml" value="0.22" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_continue_as.xml" value="0.22" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_doctor_dashboard.xml" value="0.25" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_doctor_sign_in.xml" value="0.16" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_doctor_sign_up.xml" value="0.18" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_my_appointment_doctor.xml" value="0.1" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_my_appointments.xml" value="0.1" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_my_reports.xml" value="0.1" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_patient_dashboard.xml" value="0.33" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_patient_register.xml" value="0.17" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_patient_sign_in.xml" value="0.22" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_patient_signup.xml" value="0.2" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_single_appointment.xml" value="0.18" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_splash_screen.xml" value="0.14" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_view_patient.xml" value="0.1" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/activity_write_presciption.xml" value="0.22" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/dialog_loading.xml" value="0.1" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/doctor_timing_popup.xml" value="0.25" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/fragment_patient_sign_up.xml" value="0.1213768115942029" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/row_book_appointment.xml" value="0.22" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/row_doctor_timings.xml" value="0.25" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/row_my_appointment.xml" value="0.1" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/row_my_reports.xml" value="0.22" />
+        <entry key="..\:/Tajammul/TRHealth/app/src/main/res/layout/row_view_patients.xml" value="0.18" />
+        <entry key="..\:/Tajammul/TRHealth/scanlibrary/src/main/res/layout/result_layout.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/drawable/round_button_grey.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/layout/activity_add_reports.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_continue_as.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_crop_scanned_report.xml" value="0.10625" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.1947463768115942" />
+        <entry key="app/src/main/res/layout/activity_doctor_dashboard.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_my_appointments.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_patient_dashboard.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_pdf_viewer.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_scan_report.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_single_appointment.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_view_patient.xml" value="0.1203125" />
+        <entry key="app/src/main/res/layout/activity_write_presciption.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/patient_notification_row.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/row_doctor_timings.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/row_my_reports.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/row_view_patients.xml" value="0.1947463768115942" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.18" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

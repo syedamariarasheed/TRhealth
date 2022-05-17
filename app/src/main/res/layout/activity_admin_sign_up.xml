@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_bg" />
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center"
+        android:text="Register "
+        android:textColor="@color/background_color"
+        android:textSize="32sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/admin_color"
+                app:civ_border_color="@color/background_color"
+                app:civ_border_width="2dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:padding="7dp"
+                android:textColorHint="@color/background_color"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/doctorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableRight="@drawable/ic_person"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/background_color"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:hint="Name"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:padding="7dp"
+                android:textColorHint="@color/background_color"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/doctorEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableRight="@drawable/ic_email"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/background_color"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:padding="7dp"
+                android:textColorHint="@color/background_color"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/doctorPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableRight="@drawable/ic_password"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/background_color"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:padding="7dp"
+                android:textColorHint="@color/background_color"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/doctorPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableRight="@drawable/ic_phone"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/background_color"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:padding="7dp"
+                android:textColorHint="@color/background_color"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/doctorCNIC"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:drawableRight="@drawable/ic_cnic"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/background_color"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:hint="CNIC"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/background_color"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginRight="30dp"-->
+            <!--                android:layout_marginLeft="30dp"-->
+            <!--                >-->
+            <!--                <com.google.android.material.textfield.TextInputLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:textColorHint="@color/background_color"-->
+            <!--                    android:padding="7dp"-->
+            <!--                    android:layout_marginBottom="5dp"-->
+
+            <!--                    android:theme="@style/EditScreenTextInputLayoutStyle">-->
+
+            <!--                    <com.google.android.material.textfield.TextInputEditText-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="60dp"-->
+            <!--                        android:drawablePadding="16dp"-->
+            <!--                        android:id="@+id/etLocation"-->
+            <!--                        android:drawableRight="@drawable/ic_location"-->
+            <!--                        android:drawableTint="@color/background_color"-->
+            <!--                        android:fontFamily="@font/ubuntu_medium"-->
+            <!--                        android:hint="Location"-->
+            <!--                        android:inputType="text"-->
+            <!--                        android:maxLines="1"-->
+            <!--                        android:textColor="@color/background_color"-->
+            <!--                        android:focusable="false"-->
+            <!--                        android:textSize="16sp" />-->
+            <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--            </RelativeLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/round_corner_btn"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="SIGN UP"
+                    android:textColor="@color/background_color" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

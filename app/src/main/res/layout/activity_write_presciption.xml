@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent"
+              tools:context=".Doctor.Screens.WritePresciption">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/write_prescription"
+            android:scaleType="centerCrop"
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Write Prescription"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/ubuntu_medium"
+    />
+
+    <EditText
+            android:id="@+id/tvPrescription"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/round_corner_border"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/background_color"
+            android:hint="Write your prescription here.."
+            android:padding="10dp"
+            android:gravity="top"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_medium"
+
+    />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/round_button_grey"
+            android:fontFamily="@font/ubuntu_medium"
+            android:padding="12dp"
+            android:backgroundTint="#7568E3"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/base_color"
+            android:textStyle="bold"/>
+
+</LinearLayout>

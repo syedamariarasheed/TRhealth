@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.trhealth">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:requestLegacyExternalStorage="true"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.TRHealth">
+        <activity
+                android:name=".common.PdfViewerActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:exported="true"
+                android:label="@string/title_activity_pdf_viewer"
+                android:theme="@style/Theme.TRHealth.Fullscreen"/>
+        <activity
+                android:name=".Patient.CropScannedReportActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".Patient.ScanReportActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".Doctor.Screens.ViewPatient"
+                android:exported="true"/>
+        <activity
+                android:name=".Doctor.Screens.WritePresciption"
+                android:exported="true"/>
+        <activity
+                android:name=".Doctor.Screens.SingleAppointment"
+                android:exported="true"/>
+        <activity
+                android:name=".Doctor.Screens.MyAppointmentDoctor"
+                android:exported="true"/>
+        <activity
+                android:name=".Doctor.Screens.DoctorDashboard"
+                android:exported="true"/>
+        <activity
+                android:name=".Patient.MyAppointments"
+                android:exported="true"/>
+        <activity
+                android:name=".Patient.BookDoctor"
+                android:exported="true"/>
+        <activity
+                android:name=".Patient.BookAppointment"
+                android:exported="true"/>
+        <activity
+                android:name=".Patient.MyReports"
+                android:exported="true"/>
+        <activity
+                android:name=".Patient.PatientDashboard"
+                android:exported="true"/>
+        <activity
+                android:name=".Doctor.Screens.Dashboard"
+                android:exported="true"/>
+        <activity
+                android:name=".Admin.AdminSignUp"
+                android:exported="true"/>
+        <activity
+                android:name=".Patient.PatientRegister"
+                android:exported="true"/>
+        <activity
+                android:name=".Doctor.Screens.DoctorSignUp"
+                android:exported="true"/>
+        <activity
+                android:name=".Admin.AdminSignIn"
+                android:exported="true"/>
+        <activity
+                android:name=".Patient.PatientSignIn"
+                android:exported="true"/>
+        <activity
+                android:name=".Doctor.Screens.DoctorSignIn"
+                android:exported="true"/>
+        <activity
+                android:name=".SplashScreens.ContinueAs"
+                android:exported="true"/>
+        <activity
+                android:name=".SplashScreens.SplashScreen"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:exported="true"/>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts"/>
+    </application>
+
+</manifest>

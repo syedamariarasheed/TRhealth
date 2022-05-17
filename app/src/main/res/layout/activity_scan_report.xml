@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".MainActivity">
+
+    <ImageView
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/add_reports_banner" />
+
+    <TextView
+            android:id="@+id/tvAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/banner_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Add Reports"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvAdd"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Upload your reports through: "
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_grey"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:padding="12dp"
+                    android:text="Capture File"
+                    android:textAllCaps="false"
+                    android:textColor="@color/base_color"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/fileNameAlert"
+                    android:text="First Write File Name"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    android:textColor="@color/colorNewMaroon"
+                      android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="7dp"
+                app:hintTextColor="@color/background_color"
+                android:textColorHint="@color/background_color"
+                android:theme="@style/EditScreenTextInputLayoutStyle1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:drawableRight="@drawable/ic_file"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/background_color"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:hint="Enter your filename in pdf format"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColorHint="@color/background_color"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+                android:id="@+id/validity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/gray"
+                android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
