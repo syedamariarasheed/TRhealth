@@ -67,6 +67,7 @@
         <entry key="app/src/main/res/layout/activity_scan_report.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_single_appointment.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_view_patient.xml" value="0.1203125" />
+        <entry key="app/src/main/res/layout/activity_view_prescription.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_write_presciption.xml" value="0.1" />
         <entry key="app/src/main/res/layout/patient_notification_row.xml" value="0.25" />
         <entry key="app/src/main/res/layout/row_doctor_timings.xml" value="0.19610507246376813" />

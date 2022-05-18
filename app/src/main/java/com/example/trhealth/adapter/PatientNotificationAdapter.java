@@ -2,6 +2,7 @@ package com.example.trhealth.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.trhealth.Doctor.Screens.MyAppointmentDoctor;
+import com.example.trhealth.Doctor.Screens.WritePresciption;
+import com.example.trhealth.Patient.ViewPrescriptionActivity;
 import com.example.trhealth.R;
 import com.example.trhealth.model.AppointmentStatus;
 import com.example.trhealth.model.PatientNotification;
@@ -115,6 +118,15 @@ public class PatientNotificationAdapter extends ArrayAdapter<String> {
                             });
                         }
                     });
+                }
+            });
+
+            btnView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context, ViewPrescriptionActivity.class).putExtra(
+                            "pres",arrayList.get(position).getPrescription()
+                    ));
                 }
             });
         }

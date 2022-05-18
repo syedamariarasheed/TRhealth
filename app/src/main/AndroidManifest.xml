@@ -14,10 +14,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.TRHealth">
+        <activity
+                android:name=".Patient.ViewPrescriptionActivity"
+                android:exported="true"/>
 
         <meta-data
                 android:name="com.google.mlkit.vision.DEPENDENCIES"
-                android:value="ocr" />
+                android:value="ocr"/>
+
         <activity
                 android:name=".Patient.ScanActivity"
                 android:exported="true"/>
