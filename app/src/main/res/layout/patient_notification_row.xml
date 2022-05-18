@@ -78,6 +78,36 @@
                     android:fontFamily="@font/ubuntu_medium"
             />
 
+            <LinearLayout
+                    android:id="@+id/reportRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/acceptRep"
+                        android:padding="10dp"
+                        android:background="@color/chemistColorGreen"
+                        android:layout_width="wrap_content"
+                        android:text="Accept"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/declineRep"
+                        android:padding="10dp"
+                        android:background="@color/background_color"
+                        android:layout_width="wrap_content"
+                        android:text="Declined"
+                        android:layout_marginStart="8dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -97,9 +127,6 @@
             />
 
         </LinearLayout>
-
-
-
 
     </LinearLayout>
 

@@ -21,6 +21,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.trhealth.Doctor.Screens.ViewPatient
 import com.example.trhealth.R
 import com.google.android.material.textfield.TextInputEditText
 import com.kotlinpermissions.KotlinPermissions
@@ -32,16 +33,18 @@ import java.util.*
 
 class ScanReportActivity : AppCompatActivity() {
     lateinit var btnPick: Button
+    lateinit var btnScan: Button
     lateinit var photoPath: String
     var fileName: TextInputEditText? = null
     var validity: TextView? = null
     var fileNameAlert: TextView? = null
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 1111 && resultCode == RESULT_OK && data != null) {
-            startActivity(CropScannedReportActivity.newIntent(this, data.data.toString(),fileName!!.text.toString()))
+            startActivity(CropScannedReportActivity.newIntent(this, data.data.toString(), fileName!!.text.toString()))
         } else if (requestCode == 1231 && resultCode == Activity.RESULT_OK) {
-            startActivity(CropScannedReportActivity.newIntent(this, photoPath,fileName!!.text.toString()))
+            startActivity(CropScannedReportActivity.newIntent(this, photoPath, fileName!!.text.toString()))
         }
     }
 
@@ -49,6 +52,7 @@ class ScanReportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan_report)
         fileNameAlert = findViewById(R.id.fileNameAlert)
+        btnScan = findViewById(R.id.btnScan)
         btnPick = findViewById(R.id.btnPick)
         fileName = findViewById(R.id.fileName)
         validity = findViewById(R.id.validity)
@@ -63,6 +67,19 @@ class ScanReportActivity : AppCompatActivity() {
                 checkFileName()
             }
         })
+
+        btnScan.setOnClickListener {
+            if (checkFileName()) {
+                startActivity(
+                    Intent(applicationContext, ScanActivity::class.java).putExtra(
+                        "fileName",
+                        fileName!!.text.toString()
+                    )
+                )
+            } else {
+                fileNameAlert!!.visibility = View.VISIBLE
+            }
+        }
 
         askPermission()
     }
@@ -143,7 +160,7 @@ class ScanReportActivity : AppCompatActivity() {
                 }
                 val dialog: AlertDialog = builder.create()
                 dialog.show()
-            }else{
+            } else {
                 fileNameAlert!!.visibility = View.VISIBLE
             }
         });

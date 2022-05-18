@@ -135,7 +135,6 @@ class CropScannedReportActivity : AppCompatActivity() {
         val finalUserInputFileName = userInputFileName
         uploadTask.addOnFailureListener { exception -> // Handle unsuccessful uploads
             Log.d("uploadFail", "" + exception)
-//            hideLoadingDialog()
         }.addOnSuccessListener { taskSnapshot ->
             if (taskSnapshot.metadata != null) {
                 if (taskSnapshot.metadata!!.reference != null) {
@@ -149,7 +148,6 @@ class CropScannedReportActivity : AppCompatActivity() {
                         databaseReference!!.child(FirebaseAuth.getInstance().uid!!)
                             .child(System.currentTimeMillis().toString())
                             .updateChildren(fileHash)
-//                        hideLoadingDialog()
                         Toast.makeText(
                             applicationContext,
                             "File uploaded",

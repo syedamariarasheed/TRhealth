@@ -1119,6 +1119,7 @@ public class DoctorSignUp extends AppCompatActivity {
                                                     SharedPreferences preferences = getSharedPreferences("prefs", MODE_PRIVATE);
                                                     SharedPreferences.Editor editor = preferences.edit();
                                                     editor.putBoolean("isLoggedIn", true);
+                                                    editor.putString("doctorName",doctorName.getText().toString());
                                                     editor.apply();
 
                                                     hideLoadingDialog();

@@ -1,5 +1,6 @@
 package com.example.trhealth.Doctor.Screens;
 
+import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -59,6 +60,7 @@ public class SingleAppointment extends AppCompatActivity {
         btnDecline = findViewById(R.id.btnDecline);
 
         appointmentModel = (MyAppointmentModel) getIntent().getSerializableExtra("appointmentDetails");
+
         getReports();
 
         initUI();
@@ -119,9 +121,11 @@ public class SingleAppointment extends AppCompatActivity {
     }
 
     private void notifyPatient(AppointmentStatus status) {
+        SharedPreferences preferences = getSharedPreferences("prefs", MODE_PRIVATE);
         patientNotificationId = appointmentModel.getPatientId() + UUID.randomUUID().toString();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Patient_Notification");
-        mDatabase.child(appointmentModel.getPatientId()).child(patientNotificationId).setValue(new PatientNotification(status.name(), FirebaseAuth.getInstance().getUid(), "", ""));
+        mDatabase.child(appointmentModel.getPatientId()).child(patientNotificationId).setValue(new PatientNotification(status.name(), FirebaseAuth.getInstance().getUid(),
+                preferences.getString("doctorName","not mentioned"), ""));
     }
 
     private void initUI() {

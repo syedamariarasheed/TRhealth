@@ -60,16 +60,19 @@
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.1947463768115942" />
         <entry key="app/src/main/res/layout/activity_doctor_dashboard.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_my_appointments.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_my_reports.xml" value="0.1203125" />
         <entry key="app/src/main/res/layout/activity_patient_dashboard.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_pdf_viewer.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_scan_report.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_scan.xml" value="0.1203125" />
+        <entry key="app/src/main/res/layout/activity_scan_report.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_single_appointment.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_view_patient.xml" value="0.1203125" />
         <entry key="app/src/main/res/layout/activity_write_presciption.xml" value="0.1" />
         <entry key="app/src/main/res/layout/patient_notification_row.xml" value="0.25" />
         <entry key="app/src/main/res/layout/row_doctor_timings.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/row_my_reports.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/row_view_patients.xml" value="0.1947463768115942" />
+        <entry key="app/src/main/res/layout/row_view_patients.xml" value="0.25" />
+        <entry key="app/src/main/res/xml/provider_paths.xml" value="0.11927083333333334" />
       </map>
     </option>
   </component>

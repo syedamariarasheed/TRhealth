@@ -5,6 +5,12 @@ public class PatientNotification {
     String doctorId;
     String doctorName;
     String prescription;
+    String notiType="none";
+    String isAccepted="";
+
+    public void setNotiType(String notiType) {
+        this.notiType = notiType;
+    }
 
     public void setAppointmentStatus(String appointmentStatus) {
         this.appointmentStatus = appointmentStatus;
@@ -20,6 +26,14 @@ public class PatientNotification {
 
     public void setPrescription(String prescription) {
         this.prescription = prescription;
+    }
+
+    public String getIsAccepted() {
+        return isAccepted;
+    }
+
+    public void setIsAccepted(String isAccepted) {
+        this.isAccepted = isAccepted;
     }
 
     public PatientNotification() {
@@ -46,5 +60,9 @@ public class PatientNotification {
 
     public String getPrescription() {
         return prescription;
+    }
+
+    public String getNotiType() {
+        return notiType;
     }
 }

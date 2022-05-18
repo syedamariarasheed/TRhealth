@@ -38,6 +38,7 @@ public class MyReports extends AppCompatActivity {
     FirebaseAuth mAuth;
 
     String patientId = null;
+    String id = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,21 +51,26 @@ public class MyReports extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
+        if (getIntent().getStringExtra("id") != null) {
+            id = getIntent().getStringExtra("id");
+        } else {
+            id = FirebaseAuth.getInstance().getUid();
+        }
         databaseReference2 = FirebaseDatabase.getInstance().getReference().child("Users");
         mAuth = FirebaseAuth.getInstance();
         patientId = mAuth.getUid();
 
 
         reportsArrayList = new ArrayList<>();
-        adapter = new ReportsRecyclerView(patientId,this, reportsArrayList);
+        adapter = new ReportsRecyclerView(patientId, this, reportsArrayList);
         recyclerView.setAdapter(adapter);
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Reports").child(FirebaseAuth.getInstance().getUid());
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Reports").child(id);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    for(DataSnapshot ds : dataSnapshot.getChildren()) {
-                        reportsArrayList.add(new Reports(ds.getKey(),ds.getValue(String.class),dataSnapshot.getKey()));
+                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        reportsArrayList.add(new Reports(ds.getKey(), ds.getValue(String.class), dataSnapshot.getKey()));
                     }
 
                 }

@@ -10,11 +10,18 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.trhealth.Doctor.Screens.MyAppointmentDoctor;
 import com.example.trhealth.R;
 import com.example.trhealth.model.AppointmentStatus;
 import com.example.trhealth.model.PatientNotification;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Objects;
@@ -25,6 +32,7 @@ public class PatientNotificationAdapter extends ArrayAdapter<String> {
     Activity context;
     List<PatientNotification> arrayList;
     Context context1;
+    DatabaseReference databaseReference2;
 
     public PatientNotificationAdapter(Activity context, List<PatientNotification> arrayList) {
         super(context, R.layout.row_my_reports);
@@ -44,6 +52,9 @@ public class PatientNotificationAdapter extends ArrayAdapter<String> {
         final LayoutInflater inflater = context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.patient_notification_row, null, false);
         TextView title = rowView.findViewById(R.id.title);
+        LinearLayout reportContainer = rowView.findViewById(R.id.reportRequest);
+        TextView acceptRep = rowView.findViewById(R.id.acceptRep);
+        TextView declineRep = rowView.findViewById(R.id.declineRep);
         LottieAnimationView declined = rowView.findViewById(R.id.decline);
         LottieAnimationView accepted = rowView.findViewById(R.id.lottie);
         TextView description = rowView.findViewById(R.id.description);
@@ -64,17 +75,49 @@ public class PatientNotificationAdapter extends ArrayAdapter<String> {
             declined.setVisibility(View.VISIBLE);
             accepted.setVisibility(View.GONE);
             container.setBackgroundColor(Color.parseColor("#70FF493C"));
-
         }
 
-        btnView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (context instanceof MyAppointmentDoctor) {
+        if (Objects.equals(arrayList.get(position).getNotiType(), "Report")) {
+            description.setText("Wants to show your reports");
+            btnView.setVisibility(View.GONE);
+            prescription.setVisibility(View.GONE);
+            reportContainer.setVisibility(View.VISIBLE);
 
+            acceptRep.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Report_Request");
+                    mDatabase.child(arrayList.get(position).getDoctorId()).child(FirebaseAuth.getInstance().getUid()).child("isAccepted").setValue("true").addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull @NotNull Task<Void> task) {
+                            DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Patient_Notification");
+                            mDatabase.child(FirebaseAuth.getInstance().getUid()).child(arrayList.get(position).getDoctorId()).removeValue();
+                            context.finish();
+                        }
+                    });
                 }
-            }
-        });
+            });
+
+            declineRep.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // delete
+                    DatabaseReference mDatabaseRep = FirebaseDatabase.getInstance().getReference("Report_Request");
+                    mDatabaseRep.child(arrayList.get(position).getDoctorId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull @NotNull Task<Void> task) {
+                            DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Patient_Notification");
+                            mDatabase.child(FirebaseAuth.getInstance().getUid()).child(arrayList.get(position).getDoctorId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull @NotNull Task<Void> task) {
+                                    context.finish();
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        }
         return rowView;
     }
 }
