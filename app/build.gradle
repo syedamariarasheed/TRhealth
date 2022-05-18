@@ -52,11 +52,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.github.ybq:Android-SpinKit:1.2.0'
 
-    implementation 'io.github.mayuce:AndroidDocumentScanner:1.6.1'
+    implementation 'io.github.mayuce:AndroidDocumentScanner:1.6.1' // for pic cropping
     implementation 'ru.superjob:kotlin-permissions:1.0.3'
 
     def lottieVersion = "3.4.0"
-    implementation "com.airbnb.android:lottie:$lottieVersion"
-    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.0'
+    implementation "com.airbnb.android:lottie:$lottieVersion" // animation lib
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.0' // ml lib for text-rec
 
 }

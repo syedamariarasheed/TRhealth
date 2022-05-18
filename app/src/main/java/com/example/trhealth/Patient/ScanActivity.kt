@@ -73,6 +73,7 @@ class ScanActivity : AppCompatActivity() {
         })
     }
 
+    // take permission for camera
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
@@ -84,6 +85,7 @@ class ScanActivity : AppCompatActivity() {
         }
     }
 
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == PHOTO_REQUEST && resultCode == RESULT_OK) {
@@ -93,14 +95,15 @@ class ScanActivity : AppCompatActivity() {
                 //Extract the image
                 val bitmap: Bitmap? = decodeBitmapUri(this, imageUri)
 
+                // initialize
                 val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
 
                 val image: InputImage = InputImage.fromFilePath(this, imageUri!!)
 
+                // process image and get text = visionText
                 val result = recognizer.process(image)
                     .addOnSuccessListener { visionText ->
                         // Task completed successfully
-                        // ...
                         var finalText = ""
                         for (block in visionText.textBlocks) {
                             for (line in block.lines) {
@@ -109,7 +112,9 @@ class ScanActivity : AppCompatActivity() {
                             finalText += "\n"
                         }
                         scanResults!!.text = finalText
+
                         btnSave.visibility = View.VISIBLE
+
                         btnSave.setOnClickListener {
                             createandDisplayPdf(finalText,bitmap!!)
                         }

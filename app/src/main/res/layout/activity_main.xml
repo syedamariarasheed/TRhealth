@@ -42,17 +42,6 @@
                 android:layout_marginBottom="20dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:text="CONTINUE AS"
-                    android:textColor="@color/base_color"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="32sp" />
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
@@ -153,6 +142,7 @@
                 android:layout_height="70dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
+                android:visibility="gone"
                 android:layout_marginRight="30dp"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="10dp"
@@ -165,7 +155,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-
                     android:orientation="horizontal">
 
                     <ImageView
