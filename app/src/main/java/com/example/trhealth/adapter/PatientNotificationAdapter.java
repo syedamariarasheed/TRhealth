@@ -80,6 +80,15 @@ public class PatientNotificationAdapter extends ArrayAdapter<String> {
             container.setBackgroundColor(Color.parseColor("#70FF493C"));
         }
 
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, ViewPrescriptionActivity.class).putExtra(
+                        "pres",arrayList.get(position).getPrescription()
+                ));
+            }
+        });
+
         if (Objects.equals(arrayList.get(position).getNotiType(), "Report")) {
             description.setText("Wants to show your reports");
             btnView.setVisibility(View.GONE);
@@ -121,14 +130,6 @@ public class PatientNotificationAdapter extends ArrayAdapter<String> {
                 }
             });
 
-            btnView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    context.startActivity(new Intent(context, ViewPrescriptionActivity.class).putExtra(
-                            "pres",arrayList.get(position).getPrescription()
-                    ));
-                }
-            });
         }
         return rowView;
     }
