@@ -39,6 +39,7 @@ public class MyAppointmentDoctor extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
+                    MyAppointmentModelList.clear();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         MyAppointmentModel post = snapshot.getValue(MyAppointmentModel.class);
                         post.setAppointmentId(snapshot.getKey());

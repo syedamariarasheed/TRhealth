@@ -34,6 +34,7 @@ public class MyAppointments extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
+                    patientNotificationsList.clear();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         PatientNotification post = snapshot.getValue(PatientNotification.class);
                         patientNotificationsList.add(post);
