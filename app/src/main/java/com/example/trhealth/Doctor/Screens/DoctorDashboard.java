@@ -32,6 +32,7 @@ public class DoctorDashboard extends AppCompatActivity {
     TextView tvPatientName;
     TextView tvPatientid;
     ImageView logout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +53,10 @@ public class DoctorDashboard extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 tvPatientName.setText(snapshot.getValue().toString());
+                SharedPreferences preferences = getSharedPreferences("prefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("doctorName", snapshot.getValue().toString());
+                editor.apply();
 
             }
 
@@ -65,7 +70,7 @@ public class DoctorDashboard extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                tvPatientid.setText("ID: "+snapshot.getValue().toString());
+                tvPatientid.setText("ID: " + snapshot.getValue().toString());
 
             }
 
@@ -78,14 +83,14 @@ public class DoctorDashboard extends AppCompatActivity {
         cvMyAppointments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),MyAppointmentDoctor.class));
+                startActivity(new Intent(getApplicationContext(), MyAppointmentDoctor.class));
             }
         });
 
         cvViewPatient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ViewPatient.class));
+                startActivity(new Intent(getApplicationContext(), ViewPatient.class));
             }
         });
 
